@@ -10,7 +10,7 @@ weatherForm.addEventListener('submit', event => {
     messageTwo.textContent = '';
 
     if (!location) {
-        console.log('Location field cannot be empty!');
+        messageOne.textContent = 'Location field cannot be empty!';
     } else {
         fetch(`/weather?address=${location}`).then(response => {
             response.json().then(data => {
